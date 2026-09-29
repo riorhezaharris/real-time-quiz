@@ -1,0 +1,35 @@
+# Redis + two stateless server instances, demonstrating horizontal scaling:
+# users connected to server-a and server-b share one leaderboard.
+#
+#   docker compose up --build
+#   go run ./cmd/loadgen -users 500        # spreads users across :8081 and :8082
+services:
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    # Not published to the host on purpose: the servers reach it over the
+    # compose network, and publishing 6379 clashes with a locally running
+    # Redis. Use `docker compose exec redis redis-cli` to inspect it.
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 2s
+      retries: 10
+
+  server-a:
+    build: .
+    environment:
+      REDIS_ADDR: redis:6379
+      INSTANCE_ID: server-a
+    ports: ["8081:8080"]
+    depends_on:
+      redis: { condition: service_healthy }
+
+  server-b:
+    build: .
+    environment:
+      REDIS_ADDR: redis:6379
+      INSTANCE_ID: server-b
+    ports: ["8082:8080"]
+    depends_on:
+      redis: { condition: service_healthy }

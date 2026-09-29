@@ -1,0 +1,29 @@
+[
+  {
+    "id": "demo",
+    "title": "Everyday English Vocabulary",
+    "questions": [
+      {"id": "q1", "prompt": "Choose the synonym of 'happy'.", "options": ["joyful", "angry", "tired", "hungry"], "answer": "joyful"},
+      {"id": "q2", "prompt": "Choose the antonym of 'ancient'.", "options": ["old", "modern", "broken", "famous"], "answer": "modern"},
+      {"id": "q3", "prompt": "What does 'reluctant' mean?", "options": ["eager", "unwilling", "confused", "careful"], "answer": "unwilling"},
+      {"id": "q4", "prompt": "Choose the synonym of 'rapid'.", "options": ["slow", "quiet", "fast", "heavy"], "answer": "fast"},
+      {"id": "q5", "prompt": "What does 'fragile' mean?", "options": ["strong", "easily broken", "expensive", "colorful"], "answer": "easily broken"},
+      {"id": "q6", "prompt": "Choose the antonym of 'generous'.", "options": ["kind", "selfish", "wealthy", "honest"], "answer": "selfish"},
+      {"id": "q7", "prompt": "What does 'abundant' mean?", "options": ["plentiful", "rare", "empty", "hidden"], "answer": "plentiful"},
+      {"id": "q8", "prompt": "Choose the synonym of 'brave'.", "options": ["fearful", "courageous", "lazy", "polite"], "answer": "courageous"},
+      {"id": "q9", "prompt": "What does 'vivid' mean?", "options": ["dull", "bright and clear", "small", "late"], "answer": "bright and clear"},
+      {"id": "q10", "prompt": "Choose the antonym of 'expand'.", "options": ["grow", "shrink", "open", "stretch"], "answer": "shrink"}
+    ]
+  },
+  {
+    "id": "business-101",
+    "title": "Business English Basics",
+    "questions": [
+      {"id": "q1", "prompt": "What is a 'deadline'?", "options": ["a final time limit", "a phone line", "a meeting room", "a salary"], "answer": "a final time limit"},
+      {"id": "q2", "prompt": "Choose the synonym of 'negotiate'.", "options": ["bargain", "ignore", "celebrate", "resign"], "answer": "bargain"},
+      {"id": "q3", "prompt": "What does 'revenue' mean?", "options": ["income", "expense", "debt", "tax"], "answer": "income"},
+      {"id": "q4", "prompt": "Choose the antonym of 'profit'.", "options": ["gain", "loss", "bonus", "growth"], "answer": "loss"},
+      {"id": "q5", "prompt": "What is an 'agenda'?", "options": ["a list of meeting topics", "a contract", "an invoice", "a job title"], "answer": "a list of meeting topics"}
+    ]
+  }
+]
