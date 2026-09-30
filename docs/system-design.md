@@ -39,7 +39,7 @@ flowchart LR
         QS[Quiz Content Service<br/>questions + answers]
         PG[(PostgreSQL<br/>quizzes, final results)]
         K[[Kafka / Redis Streams<br/>answer events]]
-        AN[Analytics &amp; results writer]
+        AN[Analytics and results writer]
     end
 
     subgraph Obs[Observability]
@@ -114,7 +114,7 @@ sequenceDiagram
 
     R--)SA: event: quiz demo changed
     R--)SB: event: quiz demo changed
-    Note over SA,SB: mark quiz dirty; the next tick (≤150 ms) coalesces all events
+    Note over SA,SB: mark quiz dirty - the next tick (≤150 ms) coalesces all events
     SA->>R: ZREVRANGE top-N + HMGET names
     SB->>R: ZREVRANGE top-N + HMGET names
     SA--)A: leaderboard {version, top[], participants}
